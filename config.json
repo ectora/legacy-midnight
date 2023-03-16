@@ -1,0 +1,31 @@
+{
+	"HTTP": {
+		"HOST": "127.0.0.1",
+		"PORT": 443
+	},
+	"GAME_SERVER": {
+		"SERVERS": [
+			{
+				"NAME": "[3.3] <color=#4B2DFF>Y</color><color=#4328E7>o</color><color=#3C24D0>n</color><color=#3520B8>a</color><color=#2E1CA1>k</color><color=#271789>a</color><color=#201372>P</color><color=#190F5A>S</color>",
+				"HOST": "127.0.0.1",
+				"PORT": 22102,
+				"OS_CODE": "os_yonaka"
+			},
+			{
+				"NAME": "[3.3] <color=#4B2DFF>Y</color><color=#4328E7>o</color><color=#3C24D0>n</color><color=#3520B8>a</color><color=#2E1CA1>k</color><color=#271789>a</color><color=#201372>P</color><color=#190F5A>S</color> Node2",
+				"HOST": "127.0.0.1",
+				"PORT": 22102,
+				"OS_CODE": "os_yonaka_2"
+			}
+		]
+	},
+	"MAINTENANCE": {
+		"URL": "",
+		"ENABLED": false,
+		"MESSAGE": "The dispatch server is currently in maintenance mode. For the time being, the dispatch will not give out any game servers to connect to."
+	},
+	"VERSION_HASH_TABLE": {
+		"3.3.0": "CMTh2gUatQV7InJlbW90ZU5hbWUiOiJyZXNfdmVyc2lvbnNfZXh0ZXJuYWwiLCJtZDUiOiI0ZDUwNGNmYmZhZTkzYWMzMzlkYTE1NzQ2ZmQxNTk1YiIsImZpbGVTaXplIjo3NTk5Mzd9CnsicmVtb3RlTmFtZSI6InJlc192ZXJzaW9uc19tZWRpdW0iLCJtZDUiOiIwZDNiMmRiNDBkMWIwNGMwMjljZGQzYjkxMjgwNDA5NyIsImZpbGVTaXplIjozMTEyMTB9CnsicmVtb3RlTmFtZSI6InJlc192ZXJzaW9uc19zdHJlYW1pbmciLCJtZDUiOiJkYzUyYWU0ZjkwYTc5YjBmMWZlNzZiNjg2MzRhOWRmMiIsImZpbGVTaXplIjo3Nzk3MX0KeyJyZW1vdGVOYW1lIjoicmVsZWFzZV9yZXNfdmVyc2lvbnNfZXh0ZXJuYWwiLCJtZDUiOiI0MDliZGYxNDc1YWZhZmJiODM5MDFhNzExYmE2ZjQ3ZiIsImZpbGVTaXplIjo3NTk5Mzd9CnsicmVtb3RlTmFtZSI6InJlbGVhc2VfcmVzX3ZlcnNpb25zX21lZGl1bSIsIm1kNSI6Ijc1OWJmMGVjN2NkNDc0NmYxY2FkNGE5N2E5MTRkM2FhIiwiZmlsZVNpemUiOjMxMTIxMH0KeyJyZW1vdGVOYW1lIjoicmVsZWFzZV9yZXNfdmVyc2lvbnNfc3RyZWFtaW5nIiwibWQ1IjoiMGRlMTVjZmFjYTAwMmYzYmJmMjFmMTBkNDMyYmFhZDMiLCJmaWxlU2l6ZSI6Nzc5NzF9CnsicmVtb3RlTmFtZSI6ImJhc2VfcmV2aXNpb24iLCJtZDUiOiJjMWZmYjY0YmZhYmI1YmQ4Y2Y4OGYwYzhmNmNjYmQ2OCIsImZpbGVTaXplIjoxOX0iATAqCmE0NmFmNjVkNTEyCDMuM19saXZl"
+	},
+	"AUTO_CREATE_ACCOUNT": false
+}

@@ -1,0 +1,14 @@
+{
+      "compilerOptions": {
+            "target": "ES2021",
+            "module": "commonjs",
+            "esModuleInterop": true,
+            "resolveJsonModule": true,
+            "experimentalDecorators": true,
+            "declaration": false,
+            "outDir": "build/",
+            "strict": true
+      },
+      "include": ["src"],
+      "exclude": ["node_modules", "**/__tests__/*", "build", "prisma"]
+}

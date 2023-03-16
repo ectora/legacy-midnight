@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+		<title>@dispatch | v{ver}</title>
+
+		<!-- META TAGS -->
+		<meta name="theme-color" content="#FF569F">
+		<meta property="og:type" content="website">
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+		<style>
+			*::selection {
+				color: inherit;
+				background-color: rgba(200, 200, 200, 0.25);
+			}
+
+			*:focus { outline: none !important; }
+
+			body {
+				overflow-x: hidden !important;
+			}
+
+			.anim {
+				position: relative;
+			}
+
+			.anim::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 0;
+				height: 3px;
+				background-color: #ff8f38;
+				transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+			}
+
+			@media (hover: hover) and (pointer: fine) {
+				.anim:hover::before{
+					left: 0;
+					right: auto;
+					width: 100%;
+				}
+			}
+		</style>
+
+		<!-- Scripts that power the site -->
+		<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						transitionProperty: {
+							'width': 'width'
+						},
+						fontFamily: {
+							sans: ['Overpass', 'sans-serif']
+						}
+					}
+				}
+			};
+		</script>
+	</head>
+	<body class="transition-colors bg-white dark:bg-neutral-900 text-black dark:text-white">
+		<main class="select-none flex flex-col items-center justify-center m-0 h-[100vh]">
+			<p class="text-[3vh]">
+				Latte teapot shincha blend <span class="text-[#ff8f38] anim" style="transition: color 0.3s ease-in-out">chamomile</span> yixing scented shrub iced ginger. <br/>
+				Chamomile irish breakfast fermentation london fog gaiwan <span class="text-[#ff8f38] anim" style="transition: color 0.3s ease-in-out">boba</span> lapsang souchong <br/>
+				ceylon shincha teahouse <span class="text-[#ff8f38] anim" style="transition: color 0.3s ease-in-out">kombucha</span> camellia sinensis white. Pu'erh lychee tisane <br/>
+				ceylon infusion ginger antioxidant <span class="text-[#ff8f38] anim" style="transition: color 0.3s ease-in-out">jasmine</span> darjeeling antioxidant zen mint. Oolong <br/>
+				taro honeydew shoumei white pearl milk boba <span class="text-[#ff8f38] anim" style="transition: color 0.3s ease-in-out">latte</span> lapsang souchong white rooibos. <br/>
+				Mug tea time english breakfast kukicha boba tisane <span class="text-[#ff8f38] anim" style="transition: color 0.3s ease-in-out">matcha</span> teacup. <br/>
+			</p>
+		</main>
+	</body>
+</html>
