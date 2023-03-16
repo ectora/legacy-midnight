@@ -1,0 +1,7 @@
+{
+	"DBGATE": {
+		"HOST": "127.0.0.1",
+		"PORT": 18102,
+		"AUTHKEY": "youshallnotpass"
+	}
+}
