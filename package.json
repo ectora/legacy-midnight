@@ -1,0 +1,38 @@
+{
+  "name": "gameserver",
+  "version": "0.33.0",
+  "description": "A small script to run a game server for players to play in.",
+  "main": "build/src/index.js",
+  "scripts": {
+    "start": "ts-node-dev src/index.ts --respawn --transpile-only",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MidnightTS/gameserver.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MidnightTS/gameserver/issues"
+  },
+  "homepage": "https://github.com/MidnightTS/gameserver#readme",
+  "dependencies": {
+    "@mikro-orm/core": "^5.6.2",
+    "@mikro-orm/mongodb": "^5.6.2",
+    "@mikro-orm/reflection": "^5.6.2",
+    "@protobuf-ts/runtime": "^2.8.1",
+    "bazal": "github:YonakaPS/bazal",
+    "chalk": "^4.1.2",
+    "denque": "^2.1.0",
+    "gradient-string": "^2.0.2",
+    "kcp-ts": "github:timing1337/kcp-ts",
+    "strip-json-comments": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/gradient-string": "^1.1.2",
+    "@types/node": "^18.11.7",
+    "typescript": "^4.8.4"
+  }
+}
