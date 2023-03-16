@@ -1,0 +1,47 @@
+generator client {
+	provider = "prisma-client-js"
+}
+
+datasource db {
+	provider = "mongodb"
+	url      = env("DATABASE_URL")
+}
+
+model Account {
+	id           String      @id @default(auto()) @map("_id") @db.ObjectId
+	uid          String      @unique
+	username     String      @unique
+	unique_token String      @unique
+	permission   Permissions @unique @default(USER)
+}
+
+model Session {
+	id           String @id @default(auto()) @map("_id") @db.ObjectId
+	endpoint     String @unique
+	device_id    String @unique
+	time_to_live BigInt @unique
+	session_key  String @unique
+	for_uid      String @unique
+}
+
+model Mail {
+	id              String     @id @default(auto()) @map("_id") @db.ObjectId
+	guid            String     @unique
+	mail_data       String     @unique
+	expiration_time BigInt     @unique
+	for_uid         String     @unique
+	mail_store      MailStore? @relation(fields: [mail_store_id], references: [id])
+	mail_store_id   String?    @db.ObjectId
+}
+
+model MailStore {
+	id           String @id @default(auto()) @map("_id") @db.ObjectId
+	collection   Mail[]
+	next_mail_id Int    @unique
+}
+
+enum Permissions {
+	USER
+	STAFF
+	ADMIN
+}

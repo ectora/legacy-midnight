@@ -1,0 +1,33 @@
+{
+  "name": "dbgate",
+  "version": "1.0.0",
+  "description": "Abstraction of permanent (MongoDB) and temporary (Redis) database.",
+  "repository": "https://github.com/LoonaPS/dbgate",
+  "author": "Sebsa <contact@ectora.cf>",
+  "contributors": [
+    "Chester <teamtdm567@gmail.com>"
+  ],
+  "scripts": {
+    "debug": "rm -rf build/ && tsc && node --inspect build/src/index.js",
+    "start-dev": "ts-node-dev src/index.ts --respawn --transpile-only",
+    "generateSchema": "npx prisma generate && npx prisma db push",
+    "start": "rm -rf build && tsc && node build/src/index.js",
+    "build": "rm -rf build/ && tsc"
+  },
+  "main": "build/src/index.js",
+  "dependencies": {
+    "@prisma/client": "^4.8.1",
+    "@protobuf-ts/runtime": "^2.8.2",
+    "dotenv": "^16.0.3",
+    "google-protobuf": "^3.21.2",
+    "gradient-string": "^2.0.2",
+    "ws": "^8.11.0"
+  },
+  "devDependencies": {
+    "@protobuf-ts/plugin": "^2.8.2",
+    "@types/gradient-string": "^1.1.2",
+    "@types/node": "^18.11.18",
+    "@types/ws": "^8.5.4",
+    "typescript": "^4.9.4"
+  }
+}

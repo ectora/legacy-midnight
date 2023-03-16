@@ -1,0 +1,7 @@
+{
+	"WEB": {
+		"AUTH_PASS": "youshallnotpass",
+		"HOST": "127.0.0.1",
+		"PORT": 18102
+	}
+}
