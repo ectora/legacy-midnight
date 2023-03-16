@@ -1,0 +1,57 @@
+syntax = "proto2";
+
+package ToTheMoonProto;
+
+message Pos {
+    optional float x = 1;
+    optional float y = 2;
+    optional float z = 3;
+}
+
+message SVONodeProto {
+    optional int32 area = 1;
+    optional int64 mortonIndex = 2;
+    optional int64 parent = 3;
+    optional int64 children = 4;
+    optional int32 childNum = 5;
+    repeated int64 neighbors = 6;
+    repeated int32 neighborsLevel = 7;
+    repeated int64 planarNeighbors = 8;
+    repeated int32 planarNeighborsLevel = 9;
+    repeated int64 diagonalNeighbors = 10;
+    repeated int32 diagonalNeighborsLevel = 11;
+}
+
+message SVOLayerProto {
+    optional int32 level = 1;
+    repeated SVONodeProto nodeData = 2;
+}
+
+message SVOStructureProto {
+    optional Pos basePos = 1;
+    repeated SVOLayerProto layerData = 2;
+    repeated int32 totalIndex = 3;
+}
+
+message SVOBlockProto {
+    optional SVOStructureProto svo = 1;
+    optional int32 sceneId = 2;
+    repeated int32 blockIndex = 3;
+}
+
+message SVOWorldProto {
+    repeated SVOBlockProto blocks = 1;
+    optional float side_length = 2;
+    optional int32 sceneId = 3;
+}
+
+message SVONodeWrapperProto {
+    optional SVONodeProto svoNode = 1;
+    optional int32 level = 2;
+}
+
+message SVONodePathProto {
+    optional Pos start = 1;
+    optional Pos end = 2;
+    repeated SVONodeWrapperProto svoNodes = 3;
+}
